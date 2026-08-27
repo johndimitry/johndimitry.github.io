@@ -1,0 +1,5792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =========================================================
+         CONFIGURAÇÕES BÁSICAS
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Portfólio de John Dimitry Macedo Silva — estudante de Desenvolvimento de Sistemas, tecnologia, programação e cibersegurança."
+    >
+
+    <meta
+        name="keywords"
+        content="John Dimitry, Desenvolvimento de Sistemas, programação, HTML, CSS, JavaScript, Python, SQL, GitHub, tecnologia, cibersegurança"
+    >
+
+    <meta
+        name="author"
+        content="John Dimitry Macedo Silva"
+    >
+
+    <meta
+        name="theme-color"
+        content="#050914"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <title>
+        John Dimitry | Desenvolvedor & Tecnologia
+    </title>
+
+
+    <!-- =========================================================
+         FONTES
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050914'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='58' font-family='Arial' font-weight='bold' fill='%234da3ff'%3EJD%3C/text%3E%3C/svg%3E"
+    >
+
+
+    <!-- =========================================================
+         OPEN GRAPH
+    ========================================================== -->
+
+    <meta
+        property="og:title"
+        content="John Dimitry | Portfólio"
+    >
+
+    <meta
+        property="og:description"
+        content="Estudante de Desenvolvimento de Sistemas interessado em programação, tecnologia e cibersegurança."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+
+    <!-- =========================================================
+         CSS
+    ========================================================== -->
+
+    <style>
+
+        /* =====================================================
+           VARIÁVEIS
+        ====================================================== */
+
+        :root {
+
+            --background:
+                #050914;
+
+            --background-secondary:
+                #08111f;
+
+            --background-card:
+                rgba(13, 25, 43, 0.72);
+
+            --background-card-solid:
+                #0d192b;
+
+            --text:
+                #f4f7fb;
+
+            --text-secondary:
+                #a2afc0;
+
+            --text-dark:
+                #172033;
+
+            --primary:
+                #4da3ff;
+
+            --primary-light:
+                #7dc2ff;
+
+            --secondary:
+                #755cff;
+
+            --cyan:
+                #00d9ff;
+
+            --green:
+                #39d69b;
+
+            --border:
+                rgba(148, 163, 184, 0.15);
+
+            --border-hover:
+                rgba(77, 163, 255, 0.5);
+
+            --shadow:
+                0 25px 80px rgba(0, 0, 0, 0.35);
+
+            --radius:
+                22px;
+
+            --max-width:
+                1180px;
+
+            --transition:
+                0.3s ease;
+        }
+
+
+        /* =====================================================
+           LIGHT MODE
+        ====================================================== */
+
+        body.light {
+
+            --background:
+                #f3f6fb;
+
+            --background-secondary:
+                #ffffff;
+
+            --background-card:
+                rgba(255,255,255,0.82);
+
+            --background-card-solid:
+                #ffffff;
+
+            --text:
+                #102033;
+
+            --text-secondary:
+                #5d6b7c;
+
+            --border:
+                rgba(15,23,42,0.12);
+
+            --shadow:
+                0 25px 70px rgba(15,23,42,0.12);
+        }
+
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+            scroll-padding-top: 90px;
+        }
+
+
+        body {
+
+            font-family:
+                "Inter",
+                sans-serif;
+
+            color:
+                var(--text);
+
+            background:
+                var(--background);
+
+            line-height:
+                1.7;
+
+            overflow-x:
+                hidden;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+        }
+
+
+        img {
+
+            max-width: 100%;
+
+            display: block;
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        button {
+
+            font-family:
+                inherit;
+        }
+
+
+        ::selection {
+
+            background:
+                rgba(77,163,255,0.3);
+
+            color:
+                white;
+        }
+
+
+        /* =====================================================
+           BACKGROUND
+        ====================================================== */
+
+        .grid-background {
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            z-index:
+                -5;
+
+            pointer-events:
+                none;
+
+            opacity:
+                0.35;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                42px 42px;
+
+            mask-image:
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent 90%
+                );
+        }
+
+
+        .glow {
+
+            position:
+                fixed;
+
+            width:
+                350px;
+
+            height:
+                350px;
+
+            border-radius:
+                50%;
+
+            filter:
+                blur(100px);
+
+            opacity:
+                0.1;
+
+            z-index:
+                -4;
+
+            pointer-events:
+                none;
+        }
+
+
+        .glow-1 {
+
+            background:
+                var(--primary);
+
+            left:
+                -150px;
+
+            top:
+                100px;
+        }
+
+
+        .glow-2 {
+
+            background:
+                var(--secondary);
+
+            right:
+                -160px;
+
+            top:
+                45%;
+        }
+
+
+        /* =====================================================
+           CONTAINER
+        ====================================================== */
+
+        .container {
+
+            width:
+                min(
+                    var(--max-width),
+                    calc(100% - 40px)
+                );
+
+            margin:
+                auto;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            width:
+                100%;
+
+            z-index:
+                1000;
+
+            background:
+                rgba(5,9,20,0.7);
+
+            backdrop-filter:
+                blur(18px);
+
+            border-bottom:
+                1px solid transparent;
+
+            transition:
+                var(--transition);
+        }
+
+
+        body.light header {
+
+            background:
+                rgba(243,246,251,0.8);
+        }
+
+
+        header.scrolled {
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .navbar {
+
+            min-height:
+                76px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+        }
+
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
+
+        .logo {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-weight:
+                700;
+
+            font-size:
+                1.15rem;
+        }
+
+
+        .logo-icon {
+
+            width:
+                40px;
+
+            height:
+                40px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                12px;
+
+            color:
+                white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            box-shadow:
+                0 10px 30px
+                rgba(77,163,255,0.2);
+        }
+
+
+        /* =====================================================
+           MENU
+        ====================================================== */
+
+        .nav-links {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                3px;
+
+            list-style:
+                none;
+        }
+
+
+        .nav-links a {
+
+            padding:
+                10px 11px;
+
+            border-radius:
+                10px;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.82rem;
+
+            font-weight:
+                600;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
+
+            color:
+                var(--text);
+
+            background:
+                rgba(77,163,255,0.08);
+        }
+
+
+        .nav-actions {
+
+            display:
+                flex;
+
+            gap:
+                8px;
+        }
+
+
+        .icon-button {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            background:
+                var(--background-card);
+
+            color:
+                var(--text);
+
+            cursor:
+                pointer;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .icon-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                var(--border-hover);
+        }
+
+
+        .mobile-button {
+
+            display:
+                none;
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height:
+                100vh;
+
+            padding:
+                130px 0 80px;
+
+            display:
+                grid;
+
+            align-items:
+                center;
+        }
+
+
+        .hero-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.15fr
+                0.85fr;
+
+            gap:
+                70px;
+
+            align-items:
+                center;
+        }
+
+
+        .availability {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                9px;
+
+            padding:
+                8px 13px;
+
+            border:
+                1px solid rgba(77,163,255,0.25);
+
+            background:
+                rgba(77,163,255,0.08);
+
+            border-radius:
+                999px;
+
+            color:
+                #a8d5ff;
+
+            font-size:
+                0.77rem;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .status-dot {
+
+            width:
+                8px;
+
+            height:
+                8px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--green);
+
+            box-shadow:
+                0 0 0 6px
+                rgba(57,214,155,0.08);
+
+            animation:
+                pulse 2s infinite;
+        }
+
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+
+                box-shadow:
+                    0 0 0 0
+                    rgba(57,214,155,0.2);
+            }
+
+            50% {
+
+                box-shadow:
+                    0 0 0 8px
+                    rgba(57,214,155,0);
+            }
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(
+                    3.2rem,
+                    7vw,
+                    6.5rem
+                );
+
+            line-height:
+                0.94;
+
+            letter-spacing:
+                -0.07em;
+
+            margin-bottom:
+                22px;
+        }
+
+
+        .gradient {
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #ffffff,
+                    #82c4ff,
+                    #8872ff
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+        }
+
+
+        body.light .gradient {
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #102033,
+                    #1678d1,
+                    #593dc8
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+        }
+
+
+        .typing {
+
+            color:
+                var(--cyan);
+
+            font-size:
+                1.05rem;
+
+            font-weight:
+                700;
+
+            min-height:
+                35px;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .hero-description {
+
+            max-width:
+                680px;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                1.02rem;
+
+            margin-bottom:
+                27px;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ====================================================== */
+
+        .buttons {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                11px;
+        }
+
+
+        .button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                9px;
+
+            padding:
+                12px 18px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                13px;
+
+            font-size:
+                0.86rem;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            transition:
+                var(--transition);
+        }
+
+
+        .button:hover {
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        .button-primary {
+
+            color:
+                white;
+
+            border-color:
+                transparent;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            box-shadow:
+                0 12px 35px
+                rgba(77,163,255,0.18);
+        }
+
+
+        .button-secondary {
+
+            color:
+                var(--text);
+
+            background:
+                var(--background-card);
+        }
+
+
+        /* =====================================================
+           HERO SOCIAL
+        ====================================================== */
+
+        .social-links {
+
+            display:
+                flex;
+
+            gap:
+                9px;
+
+            margin-top:
+                22px;
+        }
+
+
+        .social {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            background:
+                var(--background-card);
+
+            color:
+                var(--text-secondary);
+
+            transition:
+                var(--transition);
+        }
+
+
+        .social:hover {
+
+            transform:
+                translateY(-3px);
+
+            color:
+                var(--text);
+
+            border-color:
+                var(--border-hover);
+        }
+
+
+        /* =====================================================
+           FOTO
+        ====================================================== */
+
+        .hero-photo-area {
+
+            position:
+                relative;
+
+            width:
+                min(
+                    420px,
+                    100%
+                );
+
+            margin:
+                auto;
+        }
+
+
+        .hero-photo-area::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                -20px;
+
+            border-radius:
+                38px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(77,163,255,0.3),
+                    rgba(117,92,255,0.2),
+                    transparent
+                );
+
+            filter:
+                blur(12px);
+
+            z-index:
+                -1;
+        }
+
+
+        .hero-photo {
+
+            width:
+                100%;
+
+            aspect-ratio:
+                1 / 1;
+
+            object-fit:
+                cover;
+
+            object-position:
+                center top;
+
+            border-radius:
+                35px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        .location-card {
+
+            position:
+                absolute;
+
+            left:
+                -35px;
+
+            bottom:
+                25px;
+
+            padding:
+                15px 17px;
+
+            width:
+                185px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+            background:
+                rgba(8,17,31,0.88);
+
+            backdrop-filter:
+                blur(16px);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+
+        body.light .location-card {
+
+            background:
+                rgba(255,255,255,0.9);
+        }
+
+
+        .location-card small {
+
+            display:
+                block;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.72rem;
+
+            margin-bottom:
+                3px;
+        }
+
+
+        .location-card strong {
+
+            font-size:
+                0.88rem;
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ====================================================== */
+
+        section {
+
+            padding:
+                105px 0;
+
+            scroll-margin-top:
+                75px;
+        }
+
+
+        .section-header {
+
+            margin-bottom:
+                45px;
+        }
+
+
+        .section-number {
+
+            color:
+                var(--cyan);
+
+            font-size:
+                0.74rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.17em;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                9px;
+        }
+
+
+        .section-header h2 {
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(
+                    2rem,
+                    4vw,
+                    3.2rem
+                );
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -0.05em;
+        }
+
+
+        .section-header p {
+
+            max-width:
+                690px;
+
+            color:
+                var(--text-secondary);
+
+            margin-top:
+                13px;
+        }
+
+
+        /* =====================================================
+           GLASS
+        ====================================================== */
+
+        .glass {
+
+            background:
+                var(--background-card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius);
+
+            box-shadow:
+                var(--shadow);
+
+            backdrop-filter:
+                blur(14px);
+        }
+
+
+        /* =====================================================
+           SOBRE
+        ====================================================== */
+
+        .about-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.8fr
+                1.2fr;
+
+            gap:
+                20px;
+        }
+
+
+        .about-card {
+
+            padding:
+                30px;
+        }
+
+
+        .profile {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                17px;
+
+            margin-bottom:
+                22px;
+        }
+
+
+        .mini-photo {
+
+            width:
+                75px;
+
+            height:
+                75px;
+
+            object-fit:
+                cover;
+
+            object-position:
+                center top;
+
+            border-radius:
+                20px;
+
+            border:
+                1px solid var(--border);
+        }
+
+
+        .profile h3 {
+
+            font-size:
+                1.05rem;
+        }
+
+
+        .profile p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.82rem;
+        }
+
+
+        .about-text {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.92rem;
+        }
+
+
+        .about-text + .about-text {
+
+            margin-top:
+                13px;
+        }
+
+
+        .info-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap:
+                11px;
+
+            margin-top:
+                23px;
+        }
+
+
+        .info {
+
+            padding:
+                14px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                14px;
+
+            background:
+                rgba(255,255,255,0.02);
+        }
+
+
+        .info span {
+
+            display:
+                block;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.72rem;
+
+            margin-bottom:
+                3px;
+        }
+
+
+        .info i {
+
+            color:
+                var(--primary);
+
+            margin-right:
+                6px;
+        }
+
+
+        .info strong {
+
+            font-size:
+                0.82rem;
+        }
+
+
+        /* =====================================================
+           HABILIDADES
+        ====================================================== */
+
+        .skills-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap:
+                17px;
+        }
+
+
+        .skill-card {
+
+            padding:
+                23px;
+        }
+
+
+        .skill-title {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                13px;
+        }
+
+
+        .skill-title strong {
+
+            font-size:
+                0.9rem;
+        }
+
+
+        .skill-title span {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.73rem;
+        }
+
+
+        .bar {
+
+            height:
+                8px;
+
+            background:
+                rgba(148,163,184,0.12);
+
+            border-radius:
+                99px;
+
+            overflow:
+                hidden;
+        }
+
+
+        .bar span {
+
+            display:
+                block;
+
+            height:
+                100%;
+
+            width:
+                0;
+
+            border-radius:
+                inherit;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            transition:
+                width 1.2s
+                cubic-bezier(.2,.8,.2,1);
+        }
+
+
+        .tags {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                7px;
+
+            margin-top:
+                15px;
+        }
+
+
+        .tag {
+
+            padding:
+                6px 9px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                8px;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.72rem;
+
+            background:
+                rgba(255,255,255,0.02);
+        }
+
+
+        /* =====================================================
+           TIMELINE
+        ====================================================== */
+
+        .columns {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap:
+                60px;
+        }
+
+
+        .timeline {
+
+            position:
+                relative;
+
+            margin-left:
+                9px;
+
+            padding-left:
+                34px;
+
+            border-left:
+                1px solid var(--border);
+        }
+
+
+        .timeline-item {
+
+            position:
+                relative;
+
+            padding-bottom:
+                40px;
+        }
+
+
+        .timeline-item:last-child {
+
+            padding-bottom:
+                0;
+        }
+
+
+        .timeline-dot {
+
+            position:
+                absolute;
+
+            left:
+                -42px;
+
+            top:
+                4px;
+
+            width:
+                14px;
+
+            height:
+                14px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--primary);
+
+            border:
+                3px solid var(--background);
+
+            box-shadow:
+                0 0 0 5px
+                rgba(77,163,255,0.1);
+        }
+
+
+        .timeline-date {
+
+            color:
+                var(--cyan);
+
+            font-size:
+                0.74rem;
+
+            font-weight:
+                800;
+
+            margin-bottom:
+                5px;
+        }
+
+
+        .timeline h3 {
+
+            font-size:
+                1rem;
+
+            margin-bottom:
+                3px;
+        }
+
+
+        .timeline h4 {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.82rem;
+
+            font-weight:
+                500;
+
+            margin-bottom:
+                9px;
+        }
+
+
+        .timeline p,
+        .timeline li {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.86rem;
+        }
+
+
+        .timeline ul {
+
+            padding-left:
+                18px;
+        }
+
+
+        /* =====================================================
+           CURSOS
+        ====================================================== */
+
+        .courses-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                14px;
+        }
+
+
+        .course {
+
+            padding:
+                20px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                17px;
+
+            background:
+                var(--background-card);
+
+            transition:
+                var(--transition);
+        }
+
+
+        .course:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                var(--border-hover);
+        }
+
+
+        .course i {
+
+            color:
+                var(--primary);
+
+            font-size:
+                1.1rem;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .course h3 {
+
+            font-size:
+                0.88rem;
+
+            line-height:
+                1.4;
+        }
+
+
+        .course p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.73rem;
+
+            margin-top:
+                5px;
+        }
+
+
+        /* =====================================================
+           PROJETOS
+        ====================================================== */
+
+        .projects-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap:
+                18px;
+        }
+
+
+        .project {
+
+            padding:
+                26px;
+
+            min-height:
+                270px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+        }
+
+
+        .project::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                190px;
+
+            height:
+                190px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--primary);
+
+            filter:
+                blur(90px);
+
+            opacity:
+                0.08;
+
+            right:
+                -90px;
+
+            top:
+                -90px;
+        }
+
+
+        .project-status {
+
+            display:
+                inline-flex;
+
+            width:
+                fit-content;
+
+            padding:
+                5px 9px;
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(57,214,155,0.08);
+
+            color:
+                var(--green);
+
+            font-size:
+                0.68rem;
+
+            font-weight:
+                800;
+
+            margin-bottom:
+                14px;
+        }
+
+
+        .project-icon {
+
+            width:
+                48px;
+
+            height:
+                48px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                14px;
+
+            color:
+                var(--primary);
+
+            background:
+                rgba(77,163,255,0.1);
+
+            margin-bottom:
+                17px;
+        }
+
+
+        .project h3 {
+
+            font-size:
+                1.05rem;
+
+            margin-bottom:
+                8px;
+        }
+
+
+        .project p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.84rem;
+        }
+
+
+        .project-footer {
+
+            margin-top:
+                auto;
+
+            padding-top:
+                20px;
+        }
+
+
+        /* =====================================================
+           CYBERSECURITY
+        ====================================================== */
+
+        .cyber {
+
+            padding:
+                38px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+        }
+
+
+        .cyber::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+                linear-gradient(
+                    115deg,
+                    rgba(77,163,255,0.09),
+                    transparent 50%,
+                    rgba(117,92,255,0.08)
+                );
+
+            pointer-events:
+                none;
+        }
+
+
+        .cyber-grid {
+
+            position:
+                relative;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.05fr
+                0.95fr;
+
+            gap:
+                35px;
+
+            align-items:
+                center;
+        }
+
+
+        .terminal {
+
+            padding:
+                21px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+            background:
+                #02060c;
+
+            color:
+                #bad8ff;
+
+            font-family:
+                monospace;
+
+            font-size:
+                0.8rem;
+
+            line-height:
+                1.8;
+
+            overflow:
+                auto;
+        }
+
+
+        .terminal-green {
+
+            color:
+                #5ce5b0;
+        }
+
+
+        .terminal-purple {
+
+            color:
+                #ad9aff;
+        }
+
+
+        .terminal-gray {
+
+            color:
+                #68768a;
+        }
+
+
+        .cyber-list {
+
+            list-style:
+                none;
+
+            display:
+                grid;
+
+            gap:
+                13px;
+        }
+
+
+        .cyber-list li {
+
+            display:
+                flex;
+
+            gap:
+                12px;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.87rem;
+        }
+
+
+        .cyber-list i {
+
+            color:
+                var(--primary);
+
+            margin-top:
+                5px;
+        }
+
+
+        /* =====================================================
+           CURRÍCULO
+        ====================================================== */
+
+        .resume {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr
+                0.75fr;
+
+            gap:
+                35px;
+
+            align-items:
+                center;
+
+            padding:
+                38px;
+        }
+
+
+        .resume h3 {
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                2rem;
+
+            line-height:
+                1.1;
+
+            margin-bottom:
+                13px;
+        }
+
+
+        .resume p {
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.9rem;
+
+            margin-bottom:
+                22px;
+        }
+
+
+        .resume-image {
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+            overflow:
+                hidden;
+
+            background:
+                white;
+
+            max-height:
+                520px;
+        }
+
+
+        .resume-image img {
+
+            width:
+                100%;
+        }
+
+
+        /* =====================================================
+           CONTATO
+        ====================================================== */
+
+        .contact-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                0.8fr
+                1.2fr;
+
+            gap:
+                18px;
+        }
+
+
+        .contact-card {
+
+            padding:
+                28px;
+        }
+
+
+        .contact-card h3 {
+
+            font-size:
+                1.2rem;
+        }
+
+
+        .contact-links {
+
+            display:
+                grid;
+
+            gap:
+                10px;
+
+            margin-top:
+                20px;
+        }
+
+
+        .contact-link {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                14px;
+
+            padding:
+                14px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                14px;
+
+            background:
+                rgba(255,255,255,0.02);
+
+            transition:
+                var(--transition);
+        }
+
+
+        .contact-link:hover {
+
+            transform:
+                translateX(4px);
+
+            border-color:
+                var(--border-hover);
+        }
+
+
+        .contact-link i {
+
+            width:
+                22px;
+
+            text-align:
+                center;
+
+            color:
+                var(--primary);
+        }
+
+
+        .contact-link strong {
+
+            display:
+                block;
+
+            font-size:
+                0.83rem;
+        }
+
+
+        .contact-link span {
+
+            display:
+                block;
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.74rem;
+
+            overflow-wrap:
+                anywhere;
+        }
+
+
+        .contact-cta {
+
+            padding:
+                38px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(77,163,255,0.1),
+                    rgba(117,92,255,0.08)
+                );
+        }
+
+
+        .contact-cta h3 {
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                2rem;
+
+            line-height:
+                1.1;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .contact-cta p {
+
+            color:
+                var(--text-secondary);
+
+            margin-bottom:
+                22px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            padding:
+                35px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--text-secondary);
+
+            font-size:
+                0.76rem;
+        }
+
+
+        .footer-inner {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                20px;
+        }
+
+
+        .footer-social {
+
+            display:
+                flex;
+
+            gap:
+                8px;
+        }
+
+
+        /* =====================================================
+           REVEAL
+        ====================================================== */
+
+        .reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(25px);
+
+            transition:
+                opacity 0.75s ease,
+                transform 0.75s ease;
+        }
+
+
+        .reveal.visible {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =====================================================
+           TOAST
+        ====================================================== */
+
+        .toast {
+
+            position:
+                fixed;
+
+            right:
+                20px;
+
+            bottom:
+                20px;
+
+            z-index:
+                5000;
+
+            padding:
+                13px 17px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                13px;
+
+            background:
+                var(--background-card-solid);
+
+            color:
+                var(--text);
+
+            box-shadow:
+                var(--shadow);
+
+            opacity:
+                0;
+
+            transform:
+                translateY(25px);
+
+            pointer-events:
+                none;
+
+            transition:
+                var(--transition);
+
+            font-size:
+                0.82rem;
+        }
+
+
+        .toast.show {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =====================================================
+           SCROLL TOP
+        ====================================================== */
+
+        .scroll-top {
+
+            position:
+                fixed;
+
+            right:
+                20px;
+
+            bottom:
+                75px;
+
+            width:
+                43px;
+
+            height:
+                43px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            background:
+                var(--background-card-solid);
+
+            color:
+                var(--text);
+
+            cursor:
+                pointer;
+
+            opacity:
+                0;
+
+            visibility:
+                hidden;
+
+            transform:
+                translateY(10px);
+
+            transition:
+                var(--transition);
+
+            z-index:
+                999;
+        }
+
+
+        .scroll-top.show {
+
+            opacity:
+                1;
+
+            visibility:
+                visible;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+        ====================================================== */
+
+        @media(max-width: 1000px) {
+
+            .hero-grid,
+            .about-grid,
+            .cyber-grid,
+            .resume,
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .hero-content {
+
+                text-align:
+                    center;
+            }
+
+
+            .hero-description {
+
+                margin-left:
+                    auto;
+
+                margin-right:
+                    auto;
+            }
+
+
+            .buttons,
+            .social-links {
+
+                justify-content:
+                    center;
+            }
+
+
+            .hero-photo-area {
+
+                max-width:
+                    390px;
+
+                order:
+                    -1;
+            }
+
+
+            .location-card {
+
+                left:
+                    -10px;
+            }
+
+
+            .courses-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .skills-grid,
+            .projects-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+
+        @media(max-width: 760px) {
+
+            .container {
+
+                width:
+                    calc(100% - 28px);
+            }
+
+
+            section {
+
+                padding:
+                    80px 0;
+            }
+
+
+            .mobile-button {
+
+                display:
+                    grid;
+            }
+
+
+            .nav-links {
+
+                position:
+                    absolute;
+
+                top:
+                    76px;
+
+                left:
+                    14px;
+
+                right:
+                    14px;
+
+                display:
+                    none;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    stretch;
+
+                padding:
+                    12px;
+
+                border:
+                    1px solid var(--border);
+
+                border-radius:
+                    18px;
+
+                background:
+                    rgba(7,17,31,0.97);
+
+                box-shadow:
+                    var(--shadow);
+            }
+
+
+            body.light .nav-links {
+
+                background:
+                    rgba(255,255,255,0.97);
+            }
+
+
+            .nav-links.open {
+
+                display:
+                    flex;
+            }
+
+
+            .nav-links a {
+
+                padding:
+                    13px;
+            }
+
+
+            .hero {
+
+                padding-top:
+                    115px;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    clamp(
+                        3rem,
+                        15vw,
+                        5rem
+                    );
+            }
+
+
+            .hero-description {
+
+                font-size:
+                    0.92rem;
+            }
+
+
+            .info-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .courses-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .columns {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    70px;
+            }
+
+
+            .cyber {
+
+                padding:
+                    23px;
+            }
+
+
+            .resume {
+
+                padding:
+                    23px;
+            }
+
+
+            .contact-cta {
+
+                padding:
+                    28px;
+            }
+
+
+            .footer-inner {
+
+                flex-direction:
+                    column;
+
+                text-align:
+                    center;
+            }
+        }
+
+
+        @media(max-width: 430px) {
+
+            .buttons .button {
+
+                width:
+                    100%;
+            }
+
+
+            .location-card {
+
+                position:
+                    relative;
+
+                left:
+                    0;
+
+                bottom:
+                    auto;
+
+                width:
+                    100%;
+
+                margin-top:
+                    12px;
+            }
+
+
+            .hero-photo-area {
+
+                max-width:
+                    330px;
+            }
+        }
+
+
+        /* =====================================================
+           ACESSIBILIDADE
+        ====================================================== */
+
+        @media(prefers-reduced-motion: reduce) {
+
+            html {
+
+                scroll-behavior:
+                    auto;
+            }
+
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         BACKGROUND
+    ========================================================== -->
+
+    <div class="grid-background"></div>
+
+    <div class="glow glow-1"></div>
+
+    <div class="glow glow-2"></div>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header id="header">
+
+        <nav class="navbar container">
+
+            <a
+                href="#inicio"
+                class="logo"
+                aria-label="Página inicial"
+            >
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-code"></i>
+                </span>
+
+                <span>
+                    JD.
+                </span>
+
+            </a>
+
+
+            <ul
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <li>
+                    <a href="#inicio">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#sobre">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#habilidades">
+                        Habilidades
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#formacao">
+                        Formação
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projetos">
+                        Projetos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#cyber">
+                        Cibersegurança
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#curriculo">
+                        Currículo
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contato">
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-actions">
+
+                <button
+                    class="icon-button"
+                    id="themeButton"
+                    aria-label="Alternar tema"
+                    title="Alternar tema"
+                >
+
+                    <i class="fa-solid fa-sun"></i>
+
+                </button>
+
+
+                <button
+                    class="icon-button mobile-button"
+                    id="menuButton"
+                    aria-label="Abrir menu"
+                    title="Abrir menu"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="container hero-grid">
+
+
+                <div class="hero-content reveal">
+
+                    <div class="availability">
+
+                        <span class="status-dot"></span>
+
+                        Estudante de Desenvolvimento de Sistemas
+
+                    </div>
+
+
+                    <h1>
+
+                        John
+
+                        <br>
+
+                        <span class="gradient">
+                            Dimitry.
+                        </span>
+
+                    </h1>
+
+
+                    <div class="typing">
+
+                        <span id="typingText"></span>
+
+                        <span aria-hidden="true">
+                            |
+                        </span>
+
+                    </div>
+
+
+                    <p class="hero-description">
+
+                        Estudante de Curso Técnico em Desenvolvimento
+                        de Sistemas, interessado em programação,
+                        desenvolvimento web, tecnologia e cibersegurança.
+
+                        <br><br>
+
+                        Atualmente construindo conhecimento através
+                        de estudos, projetos e experiências práticas.
+
+                    </p>
+
+
+                    <div class="buttons">
+
+                        <a
+                            href="#projetos"
+                            class="button button-primary"
+                        >
+
+                            <i class="fa-solid fa-code"></i>
+
+                            Ver projetos
+
+                        </a>
+
+
+                        <a
+                            href="#curriculo"
+                            class="button button-secondary"
+                        >
+
+                            <i class="fa-solid fa-file-lines"></i>
+
+                            Meu currículo
+
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/5511983928987"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button button-secondary"
+                        >
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            WhatsApp
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="social-links">
+
+
+                        <a
+                            href="https://github.com/johndimitry"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social"
+                            aria-label="GitHub"
+                        >
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/john-dimitry-macedo-silva-42b7033a1/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social"
+                            aria-label="LinkedIn"
+                        >
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.instagram.com/divintitech/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social"
+                            aria-label="Instagram profissional"
+                        >
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.instagram.com/johnmacedin/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social"
+                            aria-label="Instagram pessoal"
+                        >
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO -->
+
+                <div class="hero-photo-area reveal">
+
+                    <img
+                        src="foto.png"
+                        alt="Foto profissional de John Dimitry Macedo Silva"
+                        class="hero-photo"
+                    >
+
+
+                    <div class="location-card">
+
+                        <small>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Localização
+
+                        </small>
+
+                        <strong>
+                            São Paulo, SP
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SOBRE
+        ====================================================== -->
+
+        <section id="sobre">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        01 — Sobre mim
+                    </div>
+
+                    <h2>
+                        Construindo meu caminho
+                        <br>
+                        na tecnologia.
+                    </h2>
+
+                    <p>
+                        Uma apresentação profissional baseada
+                        na minha formação, interesses e objetivos.
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+
+                    <article class="glass about-card reveal">
+
+                        <div class="profile">
+
+                            <img
+                                src="foto.png"
+                                alt="John Dimitry"
+                                class="mini-photo"
+                            >
+
+                            <div>
+
+                                <h3>
+                                    John Dimitry Macedo Silva
+                                </h3>
+
+                                <p>
+                                    Estudante de Desenvolvimento de Sistemas
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="about-text">
+
+                            Sou estudante de Curso Técnico em
+                            Desenvolvimento de Sistemas, com interesse
+                            em programação, desenvolvimento web,
+                            bancos de dados, tecnologia e segurança
+                            da informação.
+
+                        </p>
+
+
+                        <p class="about-text">
+
+                            Tenho interesse em aprender através da prática,
+                            transformar conhecimentos em projetos e
+                            evoluir continuamente minhas habilidades
+                            técnicas e profissionais.
+
+                        </p>
+
+
+                        <div class="info-grid">
+
+
+                            <div class="info">
+
+                                <span>
+
+                                    <i class="fa-solid fa-graduation-cap"></i>
+
+                                    Formação
+
+                                </span>
+
+                                <strong>
+                                    Desenvolvimento de Sistemas
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info">
+
+                                <span>
+
+                                    <i class="fa-solid fa-location-dot"></i>
+
+                                    Localização
+
+                                </span>
+
+                                <strong>
+                                    São Paulo, SP
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info">
+
+                                <span>
+
+                                    <i class="fa-solid fa-code"></i>
+
+                                    Área
+
+                                </span>
+
+                                <strong>
+                                    Tecnologia
+                                </strong>
+
+                            </div>
+
+
+                            <div class="info">
+
+                                <span>
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    Interesse
+
+                                </span>
+
+                                <strong>
+                                    Cibersegurança
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass about-card reveal">
+
+                        <div class="section-number">
+                            Objetivo profissional
+                        </div>
+
+
+                        <h3
+                            style="
+                                font-size:1.5rem;
+                                margin-bottom:14px;
+                            "
+                        >
+
+                            Evoluir, criar e contribuir.
+
+                        </h3>
+
+
+                        <p class="about-text">
+
+                            Busco minha primeira oportunidade profissional
+                            na área de tecnologia, com o objetivo de
+                            aplicar meus conhecimentos, desenvolver
+                            experiência prática e contribuir para
+                            soluções eficientes.
+
+                        </p>
+
+
+                        <p class="about-text">
+
+                            Minha formação técnica está me permitindo
+                            desenvolver conhecimentos em programação,
+                            desenvolvimento web, bancos de dados,
+                            ferramentas de desenvolvimento e fundamentos
+                            de tecnologia.
+
+                        </p>
+
+
+                        <p class="about-text">
+
+                            Paralelamente, venho me interessando cada vez
+                            mais por cibersegurança e pelos fundamentos
+                            necessários para atuar futuramente nessa área.
+
+                        </p>
+
+
+                        <div
+                            style="
+                                margin-top:25px;
+                                padding:20px;
+                                border:1px solid var(--border);
+                                border-radius:16px;
+                            "
+                        >
+
+                            <strong>
+
+                                <i
+                                    class="fa-solid fa-quote-left"
+                                    style="
+                                        color:var(--primary);
+                                        margin-right:7px;
+                                    "
+                                ></i>
+
+                                Minha mentalidade
+
+                            </strong>
+
+
+                            <p
+                                class="about-text"
+                                style="margin-top:8px;"
+                            >
+
+                                Aprender continuamente,
+                                praticar através de projetos
+                                e transformar conhecimento
+                                em resultados.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HABILIDADES
+        ====================================================== -->
+
+        <section id="habilidades">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        02 — Habilidades
+                    </div>
+
+                    <h2>
+                        O que estou aprendendo
+                        <br>
+                        e desenvolvendo.
+                    </h2>
+
+                    <p>
+
+                        Os indicadores abaixo representam meu
+                        estágio atual de aprendizado e não
+                        certificações oficiais de proficiência.
+
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <article class="glass skill-card reveal">
+
+                        <div class="skill-title">
+
+                            <strong>
+                                Desenvolvimento Web
+                            </strong>
+
+                            <span>
+                                Em desenvolvimento
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <span
+                                data-width="72%"
+                            ></span>
+
+                        </div>
+
+                        <div class="tags">
+
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsividade</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass skill-card reveal">
+
+                        <div class="skill-title">
+
+                            <strong>
+                                Lógica de Programação
+                            </strong>
+
+                            <span>
+                                Base em desenvolvimento
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <span
+                                data-width="76%"
+                            ></span>
+
+                        </div>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Algoritmos
+                            </span>
+
+                            <span class="tag">
+                                Raciocínio lógico
+                            </span>
+
+                            <span class="tag">
+                                Resolução de problemas
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass skill-card reveal">
+
+                        <div class="skill-title">
+
+                            <strong>
+                                SQL & Banco de Dados
+                            </strong>
+
+                            <span>
+                                Em aprendizado
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <span
+                                data-width="55%"
+                            ></span>
+
+                        </div>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                SQL
+                            </span>
+
+                            <span class="tag">
+                                Banco de dados
+                            </span>
+
+                            <span class="tag">
+                                Consultas
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass skill-card reveal">
+
+                        <div class="skill-title">
+
+                            <strong>
+                                Git & GitHub
+                            </strong>
+
+                            <span>
+                                Em desenvolvimento
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <span
+                                data-width="60%"
+                            ></span>
+
+                        </div>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Git
+                            </span>
+
+                            <span class="tag">
+                                GitHub
+                            </span>
+
+                            <span class="tag">
+                                Commits
+                            </span>
+
+                            <span class="tag">
+                                Branches
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass skill-card reveal">
+
+                        <div class="skill-title">
+
+                            <strong>
+                                Python
+                            </strong>
+
+                            <span>
+                                Em aprendizado
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <span
+                                data-width="48%"
+                            ></span>
+
+                        </div>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Python
+                            </span>
+
+                            <span class="tag">
+                                Sintaxe
+                            </span>
+
+                            <span class="tag">
+                                Lógica
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="glass skill-card reveal">
+
+                        <div class="skill-title">
+
+                            <strong>
+                                Soft Skills
+                            </strong>
+
+                            <span>
+                                Desenvolvimento
+                            </span>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <span
+                                data-width="82%"
+                            ></span>
+
+                        </div>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Comunicação
+                            </span>
+
+                            <span class="tag">
+                                Organização
+                            </span>
+
+                            <span class="tag">
+                                Responsabilidade
+                            </span>
+
+                            <span class="tag">
+                                Liderança
+                            </span>
+
+                            <span class="tag">
+                                Aprendizado
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FORMAÇÃO + EXPERIÊNCIA
+        ====================================================== -->
+
+        <section id="formacao">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        03 — Formação & experiência
+                    </div>
+
+                    <h2>
+                        Minha trajetória
+                        <br>
+                        até aqui.
+                    </h2>
+
+                </div>
+
+
+                <div class="columns">
+
+
+                    <!-- FORMAÇÃO -->
+
+                    <div class="reveal">
+
+                        <h3
+                            style="
+                                margin-bottom:25px;
+                            "
+                        >
+
+                            <i
+                                class="fa-solid fa-graduation-cap"
+                                style="
+                                    color:var(--primary);
+                                    margin-right:8px;
+                                "
+                            ></i>
+
+                            Formação
+
+                        </h3>
+
+
+                        <div class="timeline">
+
+
+                            <article class="timeline-item">
+
+                                <span
+                                    class="timeline-dot"
+                                ></span>
+
+
+                                <div class="timeline-date">
+
+                                    2026
+
+                                </div>
+
+
+                                <h3>
+
+                                    Ensino Médio Técnico em
+                                    Desenvolvimento de Sistemas
+
+                                </h3>
+
+
+                                <h4>
+
+                                    E.E. Herculano de Freitas
+                                    — São Paulo/SP
+
+                                </h4>
+
+
+                                <p>
+
+                                    Formação técnica voltada ao
+                                    desenvolvimento de sistemas,
+                                    programação, lógica, bancos de
+                                    dados e fundamentos de tecnologia.
+
+                                </p>
+
+                            </article>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXPERIÊNCIA -->
+
+                    <div class="reveal">
+
+                        <h3
+                            style="
+                                margin-bottom:25px;
+                            "
+                        >
+
+                            <i
+                                class="fa-solid fa-briefcase"
+                                style="
+                                    color:var(--primary);
+                                    margin-right:8px;
+                                "
+                            ></i>
+
+                            Experiência
+
+                        </h3>
+
+
+                        <div class="timeline">
+
+
+                            <article class="timeline-item">
+
+                                <span
+                                    class="timeline-dot"
+                                ></span>
+
+
+                                <div class="timeline-date">
+
+                                    2026 — Atual
+
+                                </div>
+
+
+                                <h3>
+
+                                    Aluno Monitor de Matemática
+
+                                </h3>
+
+
+                                <h4>
+
+                                    Atividade acadêmica
+
+                                </h4>
+
+
+                                <ul>
+
+                                    <li>
+                                        Auxílio a alunos com dificuldades
+                                        em matemática.
+                                    </li>
+
+                                    <li>
+                                        Apoio ao professor na organização
+                                        de atividades em sala.
+                                    </li>
+
+                                    <li>
+                                        Desenvolvimento de habilidades
+                                        de comunicação.
+                                    </li>
+
+                                    <li>
+                                        Desenvolvimento de liderança
+                                        e didática.
+                                    </li>
+
+                                </ul>
+
+                            </article>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CURSOS
+        ====================================================== -->
+
+        <section id="cursos">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        04 — Cursos & qualificações
+                    </div>
+
+                    <h2>
+                        Aprendizado complementar.
+                    </h2>
+
+                    <p>
+
+                        Cursos e qualificações presentes
+                        no meu currículo.
+
+                    </p>
+
+                </div>
+
+
+                <div class="courses-grid">
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <h3>
+                            SQL
+                        </h3>
+
+                        <p>
+                            Alura — 2026
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-brands fa-python"></i>
+
+                        <h3>
+                            Python
+                        </h3>
+
+                        <p>
+                            Fundação Bradesco — 2026
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <h3>
+                            Empreendedorismo e Inovação
+                        </h3>
+
+                        <p>
+                            Fundação Bradesco — 2026
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-solid fa-store"></i>
+
+                        <h3>
+                            Microempreendedor Individual (MEI)
+                        </h3>
+
+                        <p>
+                            Aprenda Mais — 2026
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <h3>
+                            Comércio Eletrônico
+                        </h3>
+
+                        <p>
+                            Aprenda Mais — 2026
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-solid fa-file-excel"></i>
+
+                        <h3>
+                            Microsoft Excel
+                        </h3>
+
+                        <p>
+                            Fundação Bradesco — 2025
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-solid fa-file-word"></i>
+
+                        <h3>
+                            Microsoft Word
+                        </h3>
+
+                        <p>
+                            Fundação Bradesco — 2025
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-solid fa-file-powerpoint"></i>
+
+                        <h3>
+                            Microsoft PowerPoint
+                        </h3>
+
+                        <p>
+                            Fundação Bradesco — 2025
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-brands fa-js"></i>
+
+                        <h3>
+                            JavaScript
+                        </h3>
+
+                        <p>
+                            Alura — 2024
+                        </p>
+
+                    </article>
+
+
+                    <article class="course reveal">
+
+                        <i class="fa-brands fa-html5"></i>
+
+                        <h3>
+                            HTML e CSS
+                        </h3>
+
+                        <p>
+                            Alura — 2024
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJETOS
+        ====================================================== -->
+
+        <section id="projetos">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        05 — Projetos
+                    </div>
+
+                    <h2>
+                        Projetos que mostram
+                        <br>
+                        meu aprendizado.
+                    </h2>
+
+                    <p>
+
+                        Projetos práticos serão adicionados
+                        ao longo da minha evolução.
+
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- TCC -->
+
+                    <article class="glass project reveal">
+
+                        <span class="project-status">
+
+                            TCC — Em desenvolvimento
+
+                        </span>
+
+
+                        <div class="project-icon">
+
+                            <i
+                                class="fa-solid fa-scissors"
+                            ></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Sistema de Agendamento
+                            para Barbearia
+
+                        </h3>
+
+
+                        <p>
+
+                            Sistema desenvolvido como projeto
+                            de TCC para gerenciamento de
+                            agendamentos de uma barbearia.
+
+                            O sistema permite trabalhar com
+                            clientes, serviços, barbeiros,
+                            datas e horários.
+
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                LocalStorage
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <a
+                                href="https://github.com/johndimitry"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-secondary"
+                            >
+
+                                <i class="fa-brands fa-github"></i>
+
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PORTFÓLIO -->
+
+                    <article class="glass project reveal">
+
+                        <span class="project-status">
+
+                            Projeto pessoal
+
+                        </span>
+
+
+                        <div class="project-icon">
+
+                            <i
+                                class="fa-solid fa-laptop-code"
+                            ></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Portfólio Pessoal
+
+                        </h3>
+
+
+                        <p>
+
+                            Site desenvolvido para apresentar
+                            minha formação, habilidades,
+                            projetos, currículo e presença
+                            profissional na internet.
+
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                GitHub Pages
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <a
+                                href="https://github.com/johndimitry"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-secondary"
+                            >
+
+                                <i class="fa-brands fa-github"></i>
+
+                                Meu GitHub
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CYBER -->
+
+                    <article class="glass project reveal">
+
+                        <span class="project-status">
+
+                            Próximos projetos
+
+                        </span>
+
+
+                        <div class="project-icon">
+
+                            <i
+                                class="fa-solid fa-shield-halved"
+                            ></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Laboratórios de Cibersegurança
+
+                        </h3>
+
+
+                        <p>
+
+                            Área reservada para futuros
+                            laboratórios, estudos, scripts,
+                            write-ups e projetos relacionados
+                            à segurança da informação.
+
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Linux
+                            </span>
+
+                            <span class="tag">
+                                Redes
+                            </span>
+
+                            <span class="tag">
+                                Segurança
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROGRAMACAO -->
+
+                    <article class="glass project reveal">
+
+                        <span class="project-status">
+
+                            Em evolução
+
+                        </span>
+
+
+                        <div class="project-icon">
+
+                            <i
+                                class="fa-solid fa-terminal"
+                            ></i>
+
+                        </div>
+
+
+                        <h3>
+
+                            Projetos de Programação
+
+                        </h3>
+
+
+                        <p>
+
+                            Área para reunir futuros projetos
+                            em JavaScript, Python, SQL e outras
+                            tecnologias que fizerem parte
+                            da minha jornada.
+
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                Python
+                            </span>
+
+                            <span class="tag">
+                                SQL
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CIBERSEGURANÇA
+        ====================================================== -->
+
+        <section id="cyber">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        06 — Cibersegurança
+                    </div>
+
+                    <h2>
+                        Uma área que quero
+                        <br>
+                        explorar cada vez mais.
+                    </h2>
+
+                    <p>
+
+                        Uma seção preparada para crescer
+                        conforme meus estudos em segurança
+                        da informação e cibersegurança.
+
+                    </p>
+
+                </div>
+
+
+                <div class="glass cyber reveal">
+
+
+                    <div class="cyber-grid">
+
+
+                        <div class="terminal">
+
+
+                            <div class="terminal-gray">
+                                $ whoami
+                            </div>
+
+
+                            <div class="terminal-green">
+                                john@portfolio:~$ estudante
+                            </div>
+
+
+                            <br>
+
+
+                            <div class="terminal-gray">
+                                $ cat interests.txt
+                            </div>
+
+
+                            <div>
+                                web-development
+                            </div>
+
+                            <div>
+                                programming
+                            </div>
+
+                            <div>
+                                networking
+                            </div>
+
+                            <div>
+                                linux
+                            </div>
+
+                            <div>
+                                cybersecurity
+                            </div>
+
+                            <div>
+                                continuous-learning
+                            </div>
+
+
+                            <br>
+
+
+                            <div class="terminal-purple">
+                                $ status
+                            </div>
+
+
+                            <div class="terminal-green">
+                                learning_mode = true
+                            </div>
+
+
+                        </div>
+
+
+                        <div>
+
+
+                            <ul class="cyber-list">
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    <span>
+
+                                        <strong>
+                                            Redes:
+                                        </strong>
+
+                                        fundamentos de comunicação,
+                                        protocolos e infraestrutura.
+
+                                    </span>
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    <span>
+
+                                        <strong>
+                                            Linux:
+                                        </strong>
+
+                                        ambiente importante para
+                                        desenvolvimento e segurança.
+
+                                    </span>
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    <span>
+
+                                        <strong>
+                                            Criptografia:
+                                        </strong>
+
+                                        interesse nos fundamentos
+                                        de proteção de informações.
+
+                                    </span>
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    <span>
+
+                                        <strong>
+                                            Segurança Web:
+                                        </strong>
+
+                                        interesse em vulnerabilidades
+                                        e boas práticas.
+
+                                    </span>
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    <span>
+
+                                        <strong>
+                                            OWASP:
+                                        </strong>
+
+                                        futuro foco em segurança
+                                        de aplicações web.
+
+                                    </span>
+
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CURRÍCULO
+        ====================================================== -->
+
+        <section id="curriculo">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        07 — Currículo
+                    </div>
+
+                    <h2>
+                        Minha trajetória profissional.
+                    </h2>
+
+                </div>
+
+
+                <div class="glass resume reveal">
+
+
+                    <div>
+
+
+                        <div class="section-number">
+                            CURRÍCULO
+                        </div>
+
+
+                        <h3>
+
+                            Formação,
+                            cursos e experiência.
+
+                        </h3>
+
+
+                        <p>
+
+                            Consulte meu currículo completo
+                            para conhecer minha formação acadêmica,
+                            experiência como aluno monitor,
+                            cursos e qualificações.
+
+                        </p>
+
+
+                        <div class="buttons">
+
+
+                            <a
+                                href="curriculo.png"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-primary"
+                            >
+
+                                <i
+                                    class="fa-solid fa-file-lines"
+                                ></i>
+
+                                Abrir currículo
+
+                            </a>
+
+
+                            <a
+                                href="mailto:dimitryjohnms@gmail.com"
+                                class="button button-secondary"
+                            >
+
+                                <i
+                                    class="fa-solid fa-envelope"
+                                ></i>
+
+                                Enviar e-mail
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a
+                        href="curriculo.png"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="resume-image"
+                    >
+
+                        <img
+                            src="curriculo.png"
+                            alt="Currículo de John Dimitry Macedo Silva"
+                        >
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTATO
+        ====================================================== -->
+
+        <section id="contato">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        08 — Contato
+                    </div>
+
+                    <h2>
+                        Vamos conversar.
+                    </h2>
+
+                    <p>
+
+                        Para oportunidades, projetos ou assuntos
+                        profissionais, você pode me encontrar
+                        através dos canais abaixo.
+
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <!-- LINKS -->
+
+                    <article class="glass contact-card reveal">
+
+
+                        <h3>
+                            Me encontre online
+                        </h3>
+
+
+                        <div class="contact-links">
+
+
+                            <!-- GITHUB -->
+
+                            <a
+                                href="https://github.com/johndimitry"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-link"
+                            >
+
+                                <i
+                                    class="fa-brands fa-github"
+                                ></i>
+
+                                <div>
+
+                                    <strong>
+                                        GitHub
+                                    </strong>
+
+                                    <span>
+                                        github.com/johndimitry
+                                    </span>
+
+                                </div>
+
+                            </a>
+
+
+                            <!-- LINKEDIN -->
+
+                            <a
+                                href="https://www.linkedin.com/in/john-dimitry-macedo-silva-42b7033a1/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-link"
+                            >
+
+                                <i
+                                    class="fa-brands fa-linkedin"
+                                ></i>
+
+                                <div>
+
+                                    <strong>
+                                        LinkedIn
+                                    </strong>
+
+                                    <span>
+                                        Perfil profissional
+                                    </span>
+
+                                </div>
+
+                            </a>
+
+
+                            <!-- INSTAGRAM PROFISSIONAL -->
+
+                            <a
+                                href="https://www.instagram.com/divintitech/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-link"
+                            >
+
+                                <i
+                                    class="fa-brands fa-instagram"
+                                ></i>
+
+                                <div>
+
+                                    <strong>
+                                        Instagram profissional
+                                    </strong>
+
+                                    <span>
+                                        @divintitech
+                                    </span>
+
+                                </div>
+
+                            </a>
+
+
+                            <!-- INSTAGRAM PESSOAL -->
+
+                            <a
+                                href="https://www.instagram.com/johnmacedin/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-link"
+                            >
+
+                                <i
+                                    class="fa-solid fa-user"
+                                ></i>
+
+                                <div>
+
+                                    <strong>
+                                        Instagram pessoal
+                                    </strong>
+
+                                    <span>
+                                        @johnmacedin
+                                    </span>
+
+                                </div>
+
+                            </a>
+
+
+                            <!-- EMAIL -->
+
+                            <a
+                                href="mailto:dimitryjohnms@gmail.com"
+                                class="contact-link"
+                            >
+
+                                <i
+                                    class="fa-solid fa-envelope"
+                                ></i>
+
+                                <div>
+
+                                    <strong>
+                                        E-mail
+                                    </strong>
+
+                                    <span>
+                                        dimitryjohnms@gmail.com
+                                    </span>
+
+                                </div>
+
+                            </a>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                    <!-- CTA -->
+
+                    <article class="glass contact-cta reveal">
+
+
+                        <div class="section-number">
+
+                            DISPONÍVEL PARA CONEXÕES
+
+                        </div>
+
+
+                        <h3>
+
+                            Interessado em tecnologia,
+                            projetos e oportunidades.
+
+                        </h3>
+
+
+                        <p>
+
+                            Se quiser falar comigo de forma
+                            rápida, o WhatsApp é o canal
+                            mais direto.
+
+                        </p>
+
+
+                        <div class="buttons">
+
+
+                            <a
+                                href="https://wa.me/5511983928987"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-primary"
+                            >
+
+                                <i
+                                    class="fa-brands fa-whatsapp"
+                                ></i>
+
+                                Falar pelo WhatsApp
+
+                            </a>
+
+
+                            <button
+                                class="button button-secondary"
+                                id="copyEmail"
+                                type="button"
+                            >
+
+                                <i
+                                    class="fa-solid fa-copy"
+                                ></i>
+
+                                Copiar e-mail
+
+                            </button>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container footer-inner">
+
+
+            <div>
+
+                ©
+
+                <span id="currentYear"></span>
+
+                John Dimitry Macedo Silva.
+
+                <br>
+
+                Desenvolvido com HTML, CSS e JavaScript.
+
+            </div>
+
+
+            <div class="footer-social">
+
+
+                <a
+                    href="https://github.com/johndimitry"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social"
+                    aria-label="GitHub"
+                >
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/john-dimitry-macedo-silva-42b7033a1/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social"
+                    aria-label="LinkedIn"
+                >
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/5511983928987"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social"
+                    aria-label="WhatsApp"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         TOAST
+    ========================================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <!-- =========================================================
+         BOTÃO VOLTAR AO TOPO
+    ========================================================== -->
+
+    <button
+        class="scroll-top"
+        id="scrollTop"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo"
+    >
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           ELEMENTOS
+        ====================================================== */
+
+        const header =
+            document.getElementById("header");
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+        const themeButton =
+            document.getElementById("themeButton");
+
+        const scrollTop =
+            document.getElementById("scrollTop");
+
+        const toast =
+            document.getElementById("toast");
+
+        const copyEmail =
+            document.getElementById("copyEmail");
+
+
+        /* =====================================================
+           MENU MOBILE
+        ====================================================== */
+
+        menuButton.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("open");
+
+
+                const icon =
+                    menuButton.querySelector("i");
+
+
+                if (
+                    navLinks.classList.contains("open")
+                ) {
+
+                    icon.classList.remove(
+                        "fa-bars"
+                    );
+
+                    icon.classList.add(
+                        "fa-xmark"
+                    );
+
+                } else {
+
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    icon.classList.add(
+                        "fa-bars"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           FECHAR MENU AO CLICAR
+        ====================================================== */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove(
+                            "open"
+                        );
+
+
+                        const icon =
+                            menuButton.querySelector("i");
+
+
+                        icon.classList.remove(
+                            "fa-xmark"
+                        );
+
+                        icon.classList.add(
+                            "fa-bars"
+                        );
+
+                    }
+                );
+
+            });
+
+
+        /* =====================================================
+           HEADER AO ROLAR
+        ====================================================== */
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (
+                    window.scrollY > 20
+                ) {
+
+                    header.classList.add(
+                        "scrolled"
+                    );
+
+                } else {
+
+                    header.classList.remove(
+                        "scrolled"
+                    );
+
+                }
+
+
+                if (
+                    window.scrollY > 500
+                ) {
+
+                    scrollTop.classList.add(
+                        "show"
+                    );
+
+                } else {
+
+                    scrollTop.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           VOLTAR AO TOPO
+        ====================================================== */
+
+        scrollTop.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+
+        /* =====================================================
+           TEMA
+        ====================================================== */
+
+        const savedTheme =
+            localStorage.getItem(
+                "john-theme"
+            );
+
+
+        if (
+            savedTheme === "light"
+        ) {
+
+            document.body.classList.add(
+                "light"
+            );
+
+        }
+
+
+        function updateThemeIcon() {
+
+            if (
+                document.body.classList.contains(
+                    "light"
+                )
+            ) {
+
+                themeButton.innerHTML =
+                    '<i class="fa-solid fa-moon"></i>';
+
+                themeButton.setAttribute(
+                    "title",
+                    "Ativar modo escuro"
+                );
+
+            } else {
+
+                themeButton.innerHTML =
+                    '<i class="fa-solid fa-sun"></i>';
+
+                themeButton.setAttribute(
+                    "title",
+                    "Ativar modo claro"
+                );
+
+            }
+
+        }
+
+
+        updateThemeIcon();
+
+
+        themeButton.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle(
+                    "light"
+                );
+
+
+                const isLight =
+                    document.body.classList.contains(
+                        "light"
+                    );
+
+
+                localStorage.setItem(
+                    "john-theme",
+                    isLight
+                        ? "light"
+                        : "dark"
+                );
+
+
+                updateThemeIcon();
+
+            }
+        );
+
+
+        /* =====================================================
+           TEXTO DIGITANDO
+        ====================================================== */
+
+        const typingText =
+            document.getElementById(
+                "typingText"
+            );
+
+
+        const roles = [
+
+            "Desenvolvimento Web",
+
+            "Estudante de Tecnologia",
+
+            "Programação & Sistemas",
+
+            "Explorando Cibersegurança",
+
+            "Aprendizado Contínuo"
+
+        ];
+
+
+        let roleIndex = 0;
+
+        let characterIndex = 0;
+
+        let deleting = false;
+
+
+        function typingEffect() {
+
+            const currentRole =
+                roles[roleIndex];
+
+
+            if (!deleting) {
+
+                typingText.textContent =
+                    currentRole.substring(
+                        0,
+                        characterIndex + 1
+                    );
+
+
+                characterIndex++;
+
+
+                if (
+                    characterIndex ===
+                    currentRole.length
+                ) {
+
+                    deleting = true;
+
+                    setTimeout(
+                        typingEffect,
+                        1700
+                    );
+
+                    return;
+                }
+
+
+            } else {
+
+                typingText.textContent =
+                    currentRole.substring(
+                        0,
+                        characterIndex - 1
+                    );
+
+
+                characterIndex--;
+
+
+                if (
+                    characterIndex === 0
+                ) {
+
+                    deleting = false;
+
+                    roleIndex =
+                        (
+                            roleIndex + 1
+                        ) %
+                        roles.length;
+
+                }
+
+            }
+
+
+            setTimeout(
+                typingEffect,
+                deleting ? 45 : 75
+            );
+
+        }
+
+
+        typingEffect();
+
+
+        /* =====================================================
+           REVEAL DAS SEÇÕES
+        ====================================================== */
+
+        const revealElements =
+            document.querySelectorAll(
+                ".reveal"
+            );
+
+
+        const revealObserver =
+            new IntersectionObserver(
+                function (
+                    entries,
+                    observer
+                ) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+
+                                const bars =
+                                    entry.target.querySelectorAll(
+                                        ".bar span"
+                                    );
+
+
+                                bars.forEach(
+                                    function (bar) {
+
+                                        bar.style.width =
+                                            bar.dataset.width;
+
+                                    }
+                                );
+
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(
+            function (element) {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           MENU ATIVO
+        ====================================================== */
+
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
+
+
+        const navigationLinks =
+            document.querySelectorAll(
+                ".nav-links a"
+            );
+
+
+        const sectionObserver =
+            new IntersectionObserver(
+                function (
+                    entries
+                ) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                navigationLinks.forEach(
+                                    function (link) {
+
+                                        const target =
+                                            link.getAttribute(
+                                                "href"
+                                            );
+
+
+                                        link.classList.toggle(
+                                            "active",
+                                            target ===
+                                            "#" +
+                                            entry.target.id
+                                        );
+
+                                    }
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    rootMargin:
+                        "-35% 0px -55% 0px"
+                }
+            );
+
+
+        sections.forEach(
+            function (section) {
+
+                sectionObserver.observe(
+                    section
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           TOAST
+        ====================================================== */
+
+        let toastTimer;
+
+
+        function showToast(message) {
+
+            toast.textContent =
+                message;
+
+
+            toast.classList.add(
+                "show"
+            );
+
+
+            clearTimeout(
+                toastTimer
+            );
+
+
+            toastTimer =
+                setTimeout(
+                    function () {
+
+                        toast.classList.remove(
+                            "show"
+                        );
+
+                    },
+                    2600
+                );
+
+        }
+
+
+        /* =====================================================
+           COPIAR EMAIL
+        ====================================================== */
+
+        copyEmail.addEventListener(
+            "click",
+            async function () {
+
+                const email =
+                    "dimitryjohnms@gmail.com";
+
+
+                try {
+
+                    await navigator
+                        .clipboard
+                        .writeText(
+                            email
+                        );
+
+
+                    showToast(
+                        "E-mail copiado!"
+                    );
+
+
+                } catch (error) {
+
+                    showToast(
+                        "Não foi possível copiar automaticamente."
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           ANO AUTOMÁTICO
+        ====================================================== */
+
+        document.getElementById(
+            "currentYear"
+        ).textContent =
+            new Date().getFullYear();
+
+
+        /* =====================================================
+           FECHAR MENU COM ESC
+        ====================================================== */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    navLinks.classList.remove(
+                        "open"
+                    );
+
+                    const icon =
+                        menuButton.querySelector(
+                            "i"
+                        );
+
+
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    icon.classList.add(
+                        "fa-bars"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           PREVENIR LINKS VAZIOS
+        ====================================================== */
+
+        document
+            .querySelectorAll(
+                'a[href="#"]'
+            )
+            .forEach(
+                function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function (event) {
+
+                            event.preventDefault();
+
+                        }
+                    );
+
+                }
+            );
+
+
+    </script>
+
+</body>
+
+</html>
